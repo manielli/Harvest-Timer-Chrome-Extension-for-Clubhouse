@@ -36,6 +36,10 @@
       "css": [ "css/github.css" ],
       "js": [ "js/forwarding.js", "js/profiles/github.js" ],
       "matches": [ "https://github.com/*" ]
+   }, {
+      "css": [ "css/clubhouse.css" ],
+      "js": [ "js/forwarding.js", "js/profiles/clubhouse.js" ],
+      "matches": [ "https://app.clubhouse.io/*" ]
    } ],
    "content_security_policy": "script-src 'self' https://*.harvestapp.com https://*.harvestapp.localhost; object-src 'self'",
    "description": "Track time from Chrome, Edge, Firefox and within popular project management tools.",

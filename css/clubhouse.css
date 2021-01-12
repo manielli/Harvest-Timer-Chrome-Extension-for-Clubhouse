@@ -1,0 +1,10 @@
+.harvest-timer.running {
+  background: linear-gradient(to bottom, #53b2fc, #1385e5);
+  border-color: #075fa9;
+  color: #fff;
+}
+
+.harvest-timer.running:hover {
+  background: linear-gradient(to bottom, #2ba0fb, #106fbf);
+  border-color: #054982;
+}
