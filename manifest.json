@@ -1,0 +1,54 @@
+{
+   "author": "Iridesco, LLC d/b/a Harvest",
+   "background": {
+      "scripts": [ "js/background/config.js", "js/background/cookie.js", "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/h-toolbar-off@19px.png",
+         "38": "images/h-toolbar-off@38px.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Start a Harvest timer"
+   },
+   "commands": {
+      "_execute_browser_action": {
+         "suggested_key": {
+            "default": "Alt+Shift+H"
+         }
+      }
+   },
+   "content_scripts": [ {
+      "js": [ "js/forwarding.js" ],
+      "matches": [ "https://*.harvestapp.com/time*", "http://*.harvestapp.com/time*", "http://*.harvestapp.localhost/time*" ]
+   }, {
+      "js": [ "js/forwarding.js", "js/profiles/basecamp2.js" ],
+      "matches": [ "https://basecamp.com/*" ]
+   }, {
+      "css": [ "css/basecamp3.css" ],
+      "js": [ "js/forwarding.js", "js/profiles/basecamp3.js" ],
+      "matches": [ "https://3.basecamp.com/*" ]
+   }, {
+      "css": [ "css/trello.css" ],
+      "js": [ "js/forwarding.js", "js/profiles/trello.js" ],
+      "matches": [ "https://trello.com/*" ]
+   }, {
+      "css": [ "css/github.css" ],
+      "js": [ "js/forwarding.js", "js/profiles/github.js" ],
+      "matches": [ "https://github.com/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' https://*.harvestapp.com https://*.harvestapp.localhost; object-src 'self'",
+   "description": "Track time from Chrome, Edge, Firefox and within popular project management tools.",
+   "icons": {
+      "128": "images/h-app@128px.png",
+      "16": "images/h-app@16px.png",
+      "48": "images/h-app@48px.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCfJWk+XHNjB+SmZtjzpsnwTWs+uGqzjwLig6iHtaI45ncGzQFbqoAiaqq1AVkNVFAyeT38u/WCzRtJZXA9nGN9SJKakJdbKHcihz8FOvLMiRLtDzr0IAHMEqlaSIkKn65SyNeXUMw0KBPpiosqh0vjoBecWz2xrV9nNc6wdjU5OQIDAQAB",
+   "manifest_version": 2,
+   "name": "Harvest Time Tracker",
+   "permissions": [ "http://*/*", "https://*/*", "cookies", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.6.2",
+   "web_accessible_resources": [  ]
+}
