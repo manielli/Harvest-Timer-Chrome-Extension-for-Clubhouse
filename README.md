@@ -6,7 +6,7 @@ This is a chrome extension for a Harvest Timer on Clubhouse. This extension offi
 
 1. Clone repo URL to a folder of your choice where the chrome extension will be at with running:
 
-    git clone git@bitbucket.org:laterolabs/harvest-time-tracker.git
+    git clone git@github.com:manielli/harvest-time-tracker.git
 
 2. Open chrome
 3. Go to Chrome extensions in window menu
