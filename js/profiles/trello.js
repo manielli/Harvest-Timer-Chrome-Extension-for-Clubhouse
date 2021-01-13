@@ -145,7 +145,7 @@
       container.innerHTML = "<h3 class=\"mod-no-top-margin\">Harvest</h3>\n<div class=\"u-clearfix\">\n  <a class=\"button-link\" id=\"harvest-trello-timer\">\n    <span class=\"harvest-trello-timer-icon icon-sm icon-clock\"></span><span class=\"js-sidebar-action-text\">Track Time</span>\n  </a>\n</div>";
       this.timer = container.querySelector('a');
       actions = document.querySelector(this.actionSelector);
-      return actions.appendChild(container);
+      return actions.insertBefore(container, actions.children[0]);
     };
 
     TrelloProfile.prototype.hydrateTimer = function(board, card) {

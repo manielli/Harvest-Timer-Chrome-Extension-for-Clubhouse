@@ -1,14 +1,9 @@
-.harvest-timer.running {
-  background: #298fca;
-  border-color: #298fca #298fca #026aa7;
-  color: #fff;
+.harvest-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.harvest-timer.running:active {
-  background: #0079bf;
-  border-color: #0079bf #0079bf #055a8c;
-}
-
-.harvest-timer.running .harvest-trello-timer-icon {
-  color: #fff;
+.harvest-timer > * {
+  margin: 2.5%;
 }
