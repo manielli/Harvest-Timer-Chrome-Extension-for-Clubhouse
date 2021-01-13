@@ -103,7 +103,7 @@
               storyNumber: storyNumber
             },
             storyTitle: {
-              id: _this.storyTitle(),
+              id: storyTitleHyphened,
               storyTitle: _this.storyTitle()
             },
             epicName: {
@@ -170,7 +170,7 @@
       storyTitle = data.storyTitle;
       epicName = data.epicName;
       projectName = data.projectName;
-      permalink = 'https://app.clubhouse.io/' + workspace + '/story/' + storyNumber + '/' + storyTitle;
+      permalink = 'https://app.clubhouse.io/' + workspace.id + '/story/' + storyNumber.id + '/' + storyTitle.id;
 
       this.harvestTimerButton.removeAttribute('data-listening');
       this.harvestTimerButton.setAttribute('data-permalink', permalink);
