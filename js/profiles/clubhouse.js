@@ -17,8 +17,9 @@
     function ClubhouseProfile(host1) {
       this.host = host1;
       this.addTimerIfOnStory = bind(this.addTimerIfOnStory, this);
-      this.listen();
+      this.handleMutations = bind(this.handleMutations, this);
       this.infect();
+      this.listen();
     }
 
     ClubhouseProfile.prototype.platformConfig = function() {
@@ -65,7 +66,6 @@
     };
 
     ClubhouseProfile.prototype.infect = function() {
-      console.log(this.host)
       injectScript({
         src: this.host + '/assets/platform.js',
         'data-platform-config': JSON.stringify(this.platformConfig()),
@@ -77,7 +77,8 @@
     ClubhouseProfile.prototype.addTimerIfOnStory = function() {
       var _, workspace, storyNumber, storyTitleHyphened, ref;
       ref = window.location.pathname.split('/'), _ = ref[0], workspace = ref[1], story = ref[2], storyNumber = ref[3], storyTitleHyphened = ref[4];
-      if (!(story && story !== 'story' && (storyNumber === 'space' && !Number.isInteger(storyNumber)))) {
+      console.log(ref)
+      if (!(story && story === 'story' && (storyNumber !== 'space'))) {
         return;
       }
       return this.addTimer({
