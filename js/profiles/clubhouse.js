@@ -135,7 +135,7 @@
         };
       })(this);
       window.clearInterval(this.interval);
-      return this.interval = window.setInterval(poll, 200);
+      return this.interval = window.setInterval(poll, 1000);
     }
 
     ClubhouseProfile.prototype.storyTitle = function() {
