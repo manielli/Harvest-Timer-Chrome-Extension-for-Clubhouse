@@ -24,7 +24,7 @@
       this.host = host1;
       this.addTimerIfOnStory = bind(this.addTimerIfOnStory, this);
       this.handleMutations = bind(this.handleMutations, this);
-      this.actionSelector = '.story-attributes';
+      this.actionSelector = '#updateStoryRequesterOwnerFields';
       this.platformLoaded = false;
       this.listen();
       this.infect();
@@ -135,7 +135,7 @@
         };
       })(this);
       window.clearInterval(this.interval);
-      return this.interval = window.setInterval(poll, 1000);
+      return this.interval = window.setInterval(poll, 200);
     }
 
     ClubhouseProfile.prototype.storyTitle = function() {
