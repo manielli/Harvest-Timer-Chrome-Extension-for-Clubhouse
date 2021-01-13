@@ -1,6 +1,6 @@
 # README
 
-This is a chrome extension for a Harvest Timer on Clubhouse. This extension officially announced by Harvest, add timer button for Github, Basecamp and Trello. This extension has been modified to show Harvest timer on Clubhouse.io as well. To setup follow the instructions below.
+This is a chrome extension for a Harvest Timer on Clubhouse. This extension officially released by Harvest, adds timer buttons on Github, Basecamp and Trello, but not on Clubhouse. This extension has been modified to implement Harvest timer on Clubhouse.io as well. To setup follow the instructions below.
 
 ## Setup
 
